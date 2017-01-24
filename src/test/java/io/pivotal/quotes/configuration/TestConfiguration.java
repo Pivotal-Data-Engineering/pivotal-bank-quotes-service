@@ -18,8 +18,8 @@ import io.pivotal.quotes.domain.Quote;
  */
 public class TestConfiguration {
 	
-	public static final String QUOTE_SYMBOL = "EMC";
-	public static final String QUOTE_NAME = "EMC Corp";
+	public static final String QUOTE_SYMBOL = "IBM";
+	public static final String QUOTE_NAME = "International Business Machines Corp";
 	public static final SimpleDateFormat dateFormat = new SimpleDateFormat("EEE MMM d HH:mm:ss zzzXXX yyyy", Locale.ENGLISH);
 	public static final String QUOTE_DATE_STRING = "Wed May 6 00:00:00 UTC-04:00 2015";
 	public static final BigDecimal QUOTE_LAST_PRICE = new BigDecimal(26.135);
@@ -32,15 +32,14 @@ public class TestConfiguration {
 	
 	public static final String QUOTE_SYMBOLS = "EMC,IBM";
 	/*
-	 * {"Status":"SUCCESS","Name":"EMC Corp","Symbol":"EMC","LastPrice":26.135,
-	 * "Change":0.00500000000000256,"ChangePercent":0.0191350937619692,
-	 * "Timestamp":"Wed May 6 00:00:00 UTC-04:00 2015","MSDate":42130,
-	 * "MarketCap":50755764235,"Volume":15159291,"ChangeYTD":29.74,
-	 * "ChangePercentYTD":-12.1217215870881,"High":0,"Low":0,"Open":26.52}
+	 * {"Status":"SUCCESS","Name":"International Business Machines Corp","Symbol":"IBM","LastPrice":175.3,
+	 * "Change":4.27000000000001,"ChangePercent":2.49663801672222,"Timestamp":"Tue Jan 24 13:16:07 UTC-05:00 2017",
+	 * "MSDate":42759.5528587973,"MarketCap":166684881500,"Volume":4411329,"ChangeYTD":165.99,
+	 * "ChangePercentYTD":5.60877161274776,"High":175.82,"Low":171.16,"Open":171.42}
 	 */
 	public static Quote quote() {
 		Quote quote = new Quote();
-		quote.setName("EMC Corp");
+		quote.setName(QUOTE_NAME);
 		quote.setSymbol(QUOTE_SYMBOL);
 		quote.setLastPrice(QUOTE_LAST_PRICE);
 		quote.setChange(QUOTE_CHANGE);
